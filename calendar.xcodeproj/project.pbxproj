@@ -12,6 +12,8 @@
 		85C365C626980886002B2085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85C365C526980886002B2085 /* Assets.xcassets */; };
 		85C365C926980886002B2085 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C365C726980886002B2085 /* LaunchScreen.storyboard */; };
 		85C365D126981641002B2085 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C365D026981641002B2085 /* CalendarViewController.swift */; };
+		85C365D326982707002B2085 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C365D226982707002B2085 /* CalendarCollectionViewCell.swift */; };
+		85C365D726987034002B2085 /* DayOfTheWeekCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C365D626987033002B2085 /* DayOfTheWeekCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		85C365C826980886002B2085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85C365CA26980886002B2085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85C365D026981641002B2085 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		85C365D226982707002B2085 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		85C365D626987033002B2085 /* DayOfTheWeekCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfTheWeekCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				85C365BC26980880002B2085 /* AppDelegate.swift */,
 				85C365BE26980880002B2085 /* SceneDelegate.swift */,
 				85C365D026981641002B2085 /* CalendarViewController.swift */,
+				85C365D226982707002B2085 /* CalendarCollectionViewCell.swift */,
+				85C365D626987033002B2085 /* DayOfTheWeekCollectionViewCell.swift */,
 				85C365C526980886002B2085 /* Assets.xcassets */,
 				85C365C726980886002B2085 /* LaunchScreen.storyboard */,
 				85C365CA26980886002B2085 /* Info.plist */,
@@ -133,8 +139,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C365D326982707002B2085 /* CalendarCollectionViewCell.swift in Sources */,
 				85C365D126981641002B2085 /* CalendarViewController.swift in Sources */,
 				85C365BD26980880002B2085 /* AppDelegate.swift in Sources */,
+				85C365D726987034002B2085 /* DayOfTheWeekCollectionViewCell.swift in Sources */,
 				85C365BF26980880002B2085 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
