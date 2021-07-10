@@ -1,6 +1,6 @@
 //
 //  CalendarViewController.swift
-//  calendar
+//  Calendar
 //
 //  Created by 박정아 on 2021/07/09.
 //

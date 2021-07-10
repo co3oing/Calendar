@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		85C365B926980880002B2085 /* calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85C365B926980880002B2085 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C365BC26980880002B2085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85C365BE26980880002B2085 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		85C365C526980886002B2085 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		85C365B026980880002B2085 = {
 			isa = PBXGroup;
 			children = (
-				85C365BB26980880002B2085 /* calendar */,
+				85C365BB26980880002B2085 /* Calendar */,
 				85C365BA26980880002B2085 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		85C365BA26980880002B2085 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85C365B926980880002B2085 /* calendar.app */,
+				85C365B926980880002B2085 /* Calendar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		85C365BB26980880002B2085 /* calendar */ = {
+		85C365BB26980880002B2085 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
 				85C365BC26980880002B2085 /* AppDelegate.swift */,
@@ -67,15 +67,15 @@
 				85C365C726980886002B2085 /* LaunchScreen.storyboard */,
 				85C365CA26980886002B2085 /* Info.plist */,
 			);
-			path = calendar;
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		85C365B826980880002B2085 /* calendar */ = {
+		85C365B826980880002B2085 /* Calendar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85C365CD26980886002B2085 /* Build configuration list for PBXNativeTarget "calendar" */;
+			buildConfigurationList = 85C365CD26980886002B2085 /* Build configuration list for PBXNativeTarget "Calendar" */;
 			buildPhases = (
 				85C365B526980880002B2085 /* Sources */,
 				85C365B626980880002B2085 /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = calendar;
+			name = Calendar;
 			productName = calendar;
-			productReference = 85C365B926980880002B2085 /* calendar.app */;
+			productReference = 85C365B926980880002B2085 /* Calendar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 85C365B426980880002B2085 /* Build configuration list for PBXProject "calendar" */;
+			buildConfigurationList = 85C365B426980880002B2085 /* Build configuration list for PBXProject "Calendar" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				85C365B826980880002B2085 /* calendar */,
+				85C365B826980880002B2085 /* Calendar */,
 			);
 		};
 /* End PBXProject section */
@@ -289,7 +289,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.jeongah.calendar;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.jeongah.Calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -308,7 +308,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.jeongah.calendar;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.jeongah.Calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -318,7 +318,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		85C365B426980880002B2085 /* Build configuration list for PBXProject "calendar" */ = {
+		85C365B426980880002B2085 /* Build configuration list for PBXProject "Calendar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85C365CB26980886002B2085 /* Debug */,
@@ -327,7 +327,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		85C365CD26980886002B2085 /* Build configuration list for PBXNativeTarget "calendar" */ = {
+		85C365CD26980886002B2085 /* Build configuration list for PBXNativeTarget "Calendar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85C365CE26980886002B2085 /* Debug */,
