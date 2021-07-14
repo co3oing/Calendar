@@ -41,6 +41,7 @@ class CalendarViewController: UIViewController {
         components.day = 1
         setDayInCalendar()
         setLayout()
+        addRecognizer()
     }
 }
 
@@ -149,7 +150,7 @@ extension CalendarViewController {
         endDay = calendar.range(of: .day, in: .month, for: firstDay)!.count
         startDayOfTheWeek = 2-firstDayOfTheWeek
         
-//        self.YearMonthLabel.text = dateFormatter.string(from: firstDay)
+        self.YearMonthLabel.text = dateFormatter.string(from: firstDay)
         
         days.removeAll()
         for day in startDayOfTheWeek...endDay {
@@ -158,6 +159,34 @@ extension CalendarViewController {
             } else {
                 days.append("\(day)")
             }
+        }
+    }
+    
+    func addRecognizer() {
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(_:))) // 이전
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(_:))) // 다음
+        
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+        
+        view.addGestureRecognizer(swipeRight)
+        view.addGestureRecognizer(swipeLeft)
+    }
+    
+    @objc func swipeGesture(_ gesture: UIGestureRecognizer) {
+        guard let swipeGesture = gesture as? UISwipeGestureRecognizer else { return }
+        
+        switch swipeGesture.direction {
+        case UISwipeGestureRecognizer.Direction.right:
+            components.month! -= 1
+            setDayInCalendar()
+            calendarCollectionView.reloadData()
+        case UISwipeGestureRecognizer.Direction.left:
+            components.month! += 1
+            setDayInCalendar()
+            calendarCollectionView.reloadData()
+        default:
+            break
         }
     }
 }
