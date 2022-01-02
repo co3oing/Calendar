@@ -31,6 +31,8 @@ final class ViewController: UIViewController {
         self.configurePreviousButton()
         self.configureNextButton()
         self.configureTodayButton()
+        self.configureWeekStack()
+        self.configureWeekLabel()
     }
     
     private func configureScrollView() {
@@ -105,6 +107,34 @@ final class ViewController: UIViewController {
             self.todayButton.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -10),
             self.todayButton.centerYAnchor.constraint(equalTo: self.titleLabel.centerYAnchor)
         ])
+    }
+    
+    private func configureWeekStack() {
+        self.contentView.addSubview(self.weekStack)
+        self.weekStack.distribution = .fillEqually
+        self.weekStack.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            self.weekStack.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 40),
+            self.weekStack.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 5),
+            self.weekStack.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -5)
+        ])
+    }
+    
+    private func configureWeekLabel() {
+        let dayOfTheWeek = ["일", "월", "화", "수", "목", "금", "토"]
+        
+        for i in 0..<7 {
+            let label = UILabel()
+            label.text = dayOfTheWeek[i]
+            label.textAlignment = .center
+            self.weekStack.addArrangedSubview(label)
+            
+            if i == 0 {
+                label.textColor = .systemRed
+            } else if i == 6 {
+                label.textColor = .systemBlue
+            }
+        }
     }
 
 }
