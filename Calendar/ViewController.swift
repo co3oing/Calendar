@@ -15,8 +15,8 @@ final class ViewController: UIViewController {
     private lazy var previousButton = UIButton()
     private lazy var nextButton = UIButton()
     private lazy var todayButton = UIButton()
-    private lazy var weekStack = UIStackView()
-    private lazy var collectionView = UICollectionView()
+    private lazy var weekStackView = UIStackView()
+    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +31,9 @@ final class ViewController: UIViewController {
         self.configurePreviousButton()
         self.configureNextButton()
         self.configureTodayButton()
-        self.configureWeekStack()
+        self.configureWeekStackView()
         self.configureWeekLabel()
+        self.configureCollectionView()
     }
     
     private func configureScrollView() {
@@ -109,14 +110,14 @@ final class ViewController: UIViewController {
         ])
     }
     
-    private func configureWeekStack() {
-        self.contentView.addSubview(self.weekStack)
-        self.weekStack.distribution = .fillEqually
-        self.weekStack.translatesAutoresizingMaskIntoConstraints = false
+    private func configureWeekStackView() {
+        self.contentView.addSubview(self.weekStackView)
+        self.weekStackView.distribution = .fillEqually
+        self.weekStackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            self.weekStack.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 40),
-            self.weekStack.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 5),
-            self.weekStack.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -5)
+            self.weekStackView.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 40),
+            self.weekStackView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 5),
+            self.weekStackView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -5)
         ])
     }
     
@@ -127,7 +128,7 @@ final class ViewController: UIViewController {
             let label = UILabel()
             label.text = dayOfTheWeek[i]
             label.textAlignment = .center
-            self.weekStack.addArrangedSubview(label)
+            self.weekStackView.addArrangedSubview(label)
             
             if i == 0 {
                 label.textColor = .systemRed
@@ -136,6 +137,43 @@ final class ViewController: UIViewController {
             }
         }
     }
+    
+    private func configureCollectionView() {
+        self.contentView.addSubview(self.collectionView)
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+        self.collectionView.register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: CalendarCollectionViewCell.identifier)
+        self.collectionView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            self.collectionView.topAnchor.constraint(equalTo: self.weekStackView.bottomAnchor, constant: 10),
+            self.collectionView.leadingAnchor.constraint(equalTo: self.weekStackView.leadingAnchor),
+            self.collectionView.trailingAnchor.constraint(equalTo: self.weekStackView.trailingAnchor),
+            self.collectionView.heightAnchor.constraint(equalTo: self.collectionView.widthAnchor, multiplier: 1.5),
+            self.collectionView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor)
+        ])
+    }
 
+}
+
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 31
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarCollectionViewCell.identifier, for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = self.weekStackView.frame.width / 7
+        return CGSize(width: width, height: width * 1.3)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return .zero
+    }
+    
 }
 

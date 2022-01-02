@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		852031912781D63400A40545 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852031902781D63400A40545 /* CalendarCollectionViewCell.swift */; };
 		85FD54272781BEE800EBB86A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FD54262781BEE800EBB86A /* AppDelegate.swift */; };
 		85FD54292781BEE800EBB86A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FD54282781BEE800EBB86A /* SceneDelegate.swift */; };
 		85FD542B2781BEE800EBB86A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FD542A2781BEE800EBB86A /* ViewController.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		852031902781D63400A40545 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		85FD54232781BEE800EBB86A /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85FD54262781BEE800EBB86A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85FD54282781BEE800EBB86A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				85FD54262781BEE800EBB86A /* AppDelegate.swift */,
 				85FD54282781BEE800EBB86A /* SceneDelegate.swift */,
 				85FD542A2781BEE800EBB86A /* ViewController.swift */,
+				852031902781D63400A40545 /* CalendarCollectionViewCell.swift */,
 				85FD542F2781BEEE00EBB86A /* Assets.xcassets */,
 				85FD54312781BEEE00EBB86A /* LaunchScreen.storyboard */,
 				85FD54342781BEEE00EBB86A /* Info.plist */,
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				852031912781D63400A40545 /* CalendarCollectionViewCell.swift in Sources */,
 				85FD542B2781BEE800EBB86A /* ViewController.swift in Sources */,
 				85FD54272781BEE800EBB86A /* AppDelegate.swift in Sources */,
 				85FD54292781BEE800EBB86A /* SceneDelegate.swift in Sources */,
