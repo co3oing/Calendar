@@ -3,33 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85C365BD26980880002B2085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C365BC26980880002B2085 /* AppDelegate.swift */; };
-		85C365BF26980880002B2085 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C365BE26980880002B2085 /* SceneDelegate.swift */; };
-		85C365C626980886002B2085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85C365C526980886002B2085 /* Assets.xcassets */; };
-		85C365C926980886002B2085 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C365C726980886002B2085 /* LaunchScreen.storyboard */; };
-		85C365D126981641002B2085 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C365D026981641002B2085 /* CalendarViewController.swift */; };
-		85C365D326982707002B2085 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C365D226982707002B2085 /* CalendarCollectionViewCell.swift */; };
-		85C365D726987034002B2085 /* DayOfTheWeekCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C365D626987033002B2085 /* DayOfTheWeekCollectionViewCell.swift */; };
+		85FD54272781BEE800EBB86A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FD54262781BEE800EBB86A /* AppDelegate.swift */; };
+		85FD54292781BEE800EBB86A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FD54282781BEE800EBB86A /* SceneDelegate.swift */; };
+		85FD542B2781BEE800EBB86A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FD542A2781BEE800EBB86A /* ViewController.swift */; };
+		85FD54302781BEEE00EBB86A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85FD542F2781BEEE00EBB86A /* Assets.xcassets */; };
+		85FD54332781BEEE00EBB86A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FD54312781BEEE00EBB86A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		85C365B926980880002B2085 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		85C365BC26980880002B2085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85C365BE26980880002B2085 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		85C365C526980886002B2085 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		85C365C826980886002B2085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		85C365CA26980886002B2085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85C365D026981641002B2085 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		85C365D226982707002B2085 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
-		85C365D626987033002B2085 /* DayOfTheWeekCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfTheWeekCollectionViewCell.swift; sourceTree = "<group>"; };
+		85FD54232781BEE800EBB86A /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85FD54262781BEE800EBB86A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		85FD54282781BEE800EBB86A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		85FD542A2781BEE800EBB86A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85FD542F2781BEEE00EBB86A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85FD54322781BEEE00EBB86A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		85FD54342781BEEE00EBB86A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		85C365B626980880002B2085 /* Frameworks */ = {
+		85FD54202781BEE800EBB86A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,33 +35,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		85C365B026980880002B2085 = {
+		85FD541A2781BEE800EBB86A = {
 			isa = PBXGroup;
 			children = (
-				85C365BB26980880002B2085 /* Calendar */,
-				85C365BA26980880002B2085 /* Products */,
+				85FD54252781BEE800EBB86A /* Calendar */,
+				85FD54242781BEE800EBB86A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		85C365BA26980880002B2085 /* Products */ = {
+		85FD54242781BEE800EBB86A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85C365B926980880002B2085 /* Calendar.app */,
+				85FD54232781BEE800EBB86A /* Calendar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		85C365BB26980880002B2085 /* Calendar */ = {
+		85FD54252781BEE800EBB86A /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				85C365BC26980880002B2085 /* AppDelegate.swift */,
-				85C365BE26980880002B2085 /* SceneDelegate.swift */,
-				85C365D026981641002B2085 /* CalendarViewController.swift */,
-				85C365D226982707002B2085 /* CalendarCollectionViewCell.swift */,
-				85C365D626987033002B2085 /* DayOfTheWeekCollectionViewCell.swift */,
-				85C365C526980886002B2085 /* Assets.xcassets */,
-				85C365C726980886002B2085 /* LaunchScreen.storyboard */,
-				85C365CA26980886002B2085 /* Info.plist */,
+				85FD54262781BEE800EBB86A /* AppDelegate.swift */,
+				85FD54282781BEE800EBB86A /* SceneDelegate.swift */,
+				85FD542A2781BEE800EBB86A /* ViewController.swift */,
+				85FD542F2781BEEE00EBB86A /* Assets.xcassets */,
+				85FD54312781BEEE00EBB86A /* LaunchScreen.storyboard */,
+				85FD54342781BEEE00EBB86A /* Info.plist */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -73,87 +67,86 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		85C365B826980880002B2085 /* Calendar */ = {
+		85FD54222781BEE800EBB86A /* Calendar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85C365CD26980886002B2085 /* Build configuration list for PBXNativeTarget "Calendar" */;
+			buildConfigurationList = 85FD54372781BEEE00EBB86A /* Build configuration list for PBXNativeTarget "Calendar" */;
 			buildPhases = (
-				85C365B526980880002B2085 /* Sources */,
-				85C365B626980880002B2085 /* Frameworks */,
-				85C365B726980880002B2085 /* Resources */,
+				85FD541F2781BEE800EBB86A /* Sources */,
+				85FD54202781BEE800EBB86A /* Frameworks */,
+				85FD54212781BEE800EBB86A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Calendar;
-			productName = calendar;
-			productReference = 85C365B926980880002B2085 /* Calendar.app */;
+			productName = Calendar;
+			productReference = 85FD54232781BEE800EBB86A /* Calendar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		85C365B126980880002B2085 /* Project object */ = {
+		85FD541B2781BEE800EBB86A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					85C365B826980880002B2085 = {
-						CreatedOnToolsVersion = 12.5;
+					85FD54222781BEE800EBB86A = {
+						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
-			buildConfigurationList = 85C365B426980880002B2085 /* Build configuration list for PBXProject "Calendar" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = 85FD541E2781BEE800EBB86A /* Build configuration list for PBXProject "Calendar" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 85C365B026980880002B2085;
-			productRefGroup = 85C365BA26980880002B2085 /* Products */;
+			mainGroup = 85FD541A2781BEE800EBB86A;
+			productRefGroup = 85FD54242781BEE800EBB86A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				85C365B826980880002B2085 /* Calendar */,
+				85FD54222781BEE800EBB86A /* Calendar */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		85C365B726980880002B2085 /* Resources */ = {
+		85FD54212781BEE800EBB86A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85C365C926980886002B2085 /* LaunchScreen.storyboard in Resources */,
-				85C365C626980886002B2085 /* Assets.xcassets in Resources */,
+				85FD54332781BEEE00EBB86A /* LaunchScreen.storyboard in Resources */,
+				85FD54302781BEEE00EBB86A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		85C365B526980880002B2085 /* Sources */ = {
+		85FD541F2781BEE800EBB86A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85C365D326982707002B2085 /* CalendarCollectionViewCell.swift in Sources */,
-				85C365D126981641002B2085 /* CalendarViewController.swift in Sources */,
-				85C365BD26980880002B2085 /* AppDelegate.swift in Sources */,
-				85C365D726987034002B2085 /* DayOfTheWeekCollectionViewCell.swift in Sources */,
-				85C365BF26980880002B2085 /* SceneDelegate.swift in Sources */,
+				85FD542B2781BEE800EBB86A /* ViewController.swift in Sources */,
+				85FD54272781BEE800EBB86A /* AppDelegate.swift in Sources */,
+				85FD54292781BEE800EBB86A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		85C365C726980886002B2085 /* LaunchScreen.storyboard */ = {
+		85FD54312781BEEE00EBB86A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				85C365C826980886002B2085 /* Base */,
+				85FD54322781BEEE00EBB86A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -161,13 +154,13 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		85C365CB26980886002B2085 /* Debug */ = {
+		85FD54352781BEEE00EBB86A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -212,7 +205,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -222,13 +215,13 @@
 			};
 			name = Debug;
 		};
-		85C365CC26980886002B2085 /* Release */ = {
+		85FD54362781BEEE00EBB86A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -267,7 +260,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -277,39 +270,55 @@
 			};
 			name = Release;
 		};
-		85C365CE26980886002B2085 /* Debug */ = {
+		85FD54382781BEEE00EBB86A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RPVCHR97U7;
-				INFOPLIST_FILE = calendar/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Calendar/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.jeongah.Calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		85C365CF26980886002B2085 /* Release */ = {
+		85FD54392781BEEE00EBB86A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RPVCHR97U7;
-				INFOPLIST_FILE = calendar/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Calendar/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.jeongah.Calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -318,25 +327,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		85C365B426980880002B2085 /* Build configuration list for PBXProject "Calendar" */ = {
+		85FD541E2781BEE800EBB86A /* Build configuration list for PBXProject "Calendar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				85C365CB26980886002B2085 /* Debug */,
-				85C365CC26980886002B2085 /* Release */,
+				85FD54352781BEEE00EBB86A /* Debug */,
+				85FD54362781BEEE00EBB86A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		85C365CD26980886002B2085 /* Build configuration list for PBXNativeTarget "Calendar" */ = {
+		85FD54372781BEEE00EBB86A /* Build configuration list for PBXNativeTarget "Calendar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				85C365CE26980886002B2085 /* Debug */,
-				85C365CF26980886002B2085 /* Release */,
+				85FD54382781BEEE00EBB86A /* Debug */,
+				85FD54392781BEEE00EBB86A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 85C365B126980880002B2085 /* Project object */;
+	rootObject = 85FD541B2781BEE800EBB86A /* Project object */;
 }
