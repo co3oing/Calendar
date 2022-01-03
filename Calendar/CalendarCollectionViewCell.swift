@@ -27,6 +27,10 @@ final class CalendarCollectionViewCell: UICollectionViewCell {
         self.dayLabel.text = nil
     }
     
+    func update(day: String) {
+        self.dayLabel.text = day
+    }
+    
     private func configure() {
         self.addSubview(self.dayLabel)
         self.dayLabel.font = .boldSystemFont(ofSize: 12)

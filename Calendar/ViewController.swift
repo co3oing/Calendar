@@ -17,7 +17,12 @@ final class ViewController: UIViewController {
     private lazy var todayButton = UIButton()
     private lazy var weekStackView = UIStackView()
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-
+    
+    private let calendar = Calendar.current
+    private let dateFormatter = DateFormatter()
+    private var calendarDate = Date()
+    private var days = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemBackground
@@ -34,6 +39,8 @@ final class ViewController: UIViewController {
         self.configureWeekStackView()
         self.configureWeekLabel()
         self.configureCollectionView()
+        self.configureCalendar()
+        self.updateCalendar()
     }
     
     private func configureScrollView() {
@@ -152,17 +159,18 @@ final class ViewController: UIViewController {
             self.collectionView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor)
         ])
     }
-
+    
 }
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 31
+        return self.days.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarCollectionViewCell.identifier, for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
+        cell.update(day: self.days[indexPath.item])
         return cell
     }
     
@@ -177,3 +185,51 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
     
 }
 
+extension ViewController {
+    
+    private func configureCalendar() {
+        let components = self.calendar.dateComponents([.year, .month], from: self.calendarDate)
+        self.calendarDate = self.calendar.date(from: components) ?? Date()
+        self.dateFormatter.dateFormat = "yyyy년 MM월"
+    }
+    
+    private func updateCalendar() {
+        self.updateTitle()
+        self.updateDays()
+    }
+    
+    private func updateTitle() {
+        let date = self.dateFormatter.string(from: self.calendarDate)
+        self.titleLabel.text = date
+    }
+    
+    private func updateDays() {
+        self.days.removeAll()
+        let startDayOfTheWeek = self.startDayOfTheWeek()
+        let totalDays = startDayOfTheWeek + self.endDate()
+        for day in Int()..<totalDays {
+            if day < startDayOfTheWeek {
+                self.days.append("")
+                continue
+            }
+            self.days.append("\(day - startDayOfTheWeek + 1)")
+        }
+    }
+    
+    private func minusMonth() {
+        self.calendarDate = self.calendar.date(byAdding: DateComponents(month: -1), to: self.calendarDate) ?? Date()
+    }
+    
+    private func plusMonth() {
+        self.calendarDate = self.calendar.date(byAdding: DateComponents(month: 1), to: self.calendarDate) ?? Date()
+    }
+    
+    private func startDayOfTheWeek() -> Int {
+        return self.calendar.component(.weekday, from: self.calendarDate) - 1
+    }
+    
+    private func endDate() -> Int {
+        return self.calendar.range(of: .day, in: .month, for: self.calendarDate)?.count ?? Int()
+    }
+    
+}
