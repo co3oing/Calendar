@@ -23,9 +23,9 @@ final class CalendarCollectionViewCell: UICollectionViewCell {
         self.configure()
     }
     
-    override func prepareForReuse() {
-        self.dayLabel.text = nil
-    }
+//    override func prepareForReuse() {
+//        self.dayLabel.text = nil
+//    }
     
     func update(day: String) {
         self.dayLabel.text = day
@@ -33,7 +33,6 @@ final class CalendarCollectionViewCell: UICollectionViewCell {
     
     private func configure() {
         self.addSubview(self.dayLabel)
-        self.dayLabel.text = "0"
         self.dayLabel.font = .boldSystemFont(ofSize: 12)
         self.dayLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
