@@ -40,7 +40,6 @@ final class ViewController: UIViewController {
         self.configureWeekLabel()
         self.configureCollectionView()
         self.configureCalendar()
-        self.updateCalendar()
     }
     
     private func configureScrollView() {
@@ -106,6 +105,7 @@ final class ViewController: UIViewController {
     private func configureTodayButton() {
         self.contentView.addSubview(self.todayButton)
         self.todayButton.setTitle("Today", for: .normal)
+        self.todayButton.setTitleColor(.systemBackground, for: .normal)
         self.todayButton.backgroundColor = .label
         self.todayButton.layer.cornerRadius = 5
         self.todayButton.translatesAutoresizingMaskIntoConstraints = false
@@ -136,12 +136,6 @@ final class ViewController: UIViewController {
             label.text = dayOfTheWeek[i]
             label.textAlignment = .center
             self.weekStackView.addArrangedSubview(label)
-            
-            if i == 0 {
-                label.textColor = .systemRed
-            } else if i == 6 {
-                label.textColor = .systemBlue
-            }
         }
     }
     
@@ -165,12 +159,11 @@ final class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.days.count
+        return 42
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarCollectionViewCell.identifier, for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
-        cell.update(day: self.days[indexPath.item])
         return cell
     }
     
@@ -188,9 +181,18 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
 extension ViewController {
     
     private func configureCalendar() {
-        let components = self.calendar.dateComponents([.year, .month], from: self.calendarDate)
+        let components = self.calendar.dateComponents([.year, .month], from: Date())
         self.calendarDate = self.calendar.date(from: components) ?? Date()
         self.dateFormatter.dateFormat = "yyyy년 MM월"
+        self.updateCalendar()
+    }
+    
+    private func startDayOfTheWeek() -> Int {
+        return self.calendar.component(.weekday, from: self.calendarDate) - 1
+    }
+    
+    private func endDate() -> Int {
+        return self.calendar.range(of: .day, in: .month, for: self.calendarDate)?.count ?? Int()
     }
     
     private func updateCalendar() {
@@ -207,29 +209,26 @@ extension ViewController {
         self.days.removeAll()
         let startDayOfTheWeek = self.startDayOfTheWeek()
         let totalDays = startDayOfTheWeek + self.endDate()
+        
         for day in Int()..<totalDays {
             if day < startDayOfTheWeek {
-                self.days.append("")
+                self.days.append(String())
                 continue
             }
             self.days.append("\(day - startDayOfTheWeek + 1)")
         }
+        
+        self.collectionView.reloadData()
     }
     
     private func minusMonth() {
         self.calendarDate = self.calendar.date(byAdding: DateComponents(month: -1), to: self.calendarDate) ?? Date()
+        self.updateCalendar()
     }
     
     private func plusMonth() {
         self.calendarDate = self.calendar.date(byAdding: DateComponents(month: 1), to: self.calendarDate) ?? Date()
-    }
-    
-    private func startDayOfTheWeek() -> Int {
-        return self.calendar.component(.weekday, from: self.calendarDate) - 1
-    }
-    
-    private func endDate() -> Int {
-        return self.calendar.range(of: .day, in: .month, for: self.calendarDate)?.count ?? Int()
+        self.updateCalendar()
     }
     
 }
