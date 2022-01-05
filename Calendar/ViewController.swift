@@ -110,6 +110,7 @@ final class ViewController: UIViewController {
         self.todayButton.setTitleColor(.systemBackground, for: .normal)
         self.todayButton.backgroundColor = .label
         self.todayButton.layer.cornerRadius = 5
+        self.todayButton.addTarget(self, action: #selector(self.didTodayButtonTouched), for: .touchUpInside)
         self.todayButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.todayButton.widthAnchor.constraint(equalToConstant: 60),
@@ -184,10 +185,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
 extension ViewController {
     
     private func configureCalendar() {
-        let components = self.calendar.dateComponents([.year, .month], from: Date())
-        self.calendarDate = self.calendar.date(from: components) ?? Date()
         self.dateFormatter.dateFormat = "yyyy년 MM월"
-        self.updateCalendar()
+        self.today()
     }
     
     private func startDayOfTheWeek() -> Int {
@@ -234,6 +233,12 @@ extension ViewController {
         self.updateCalendar()
     }
     
+    private func today() {
+        let components = self.calendar.dateComponents([.year, .month], from: Date())
+        self.calendarDate = self.calendar.date(from: components) ?? Date()
+        self.updateCalendar()
+    }
+    
 }
 
 extension ViewController {
@@ -244,6 +249,11 @@ extension ViewController {
     
     @objc private func didNextButtonTouched(_ sender: UIButton) {
         self.plusMonth()
+    }
+    
+    
+    @objc private func didTodayButtonTouched(_ sender: UIButton) {
+        self.today()
     }
     
 }
