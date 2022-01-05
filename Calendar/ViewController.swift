@@ -80,6 +80,7 @@ final class ViewController: UIViewController {
         self.contentView.addSubview(self.previousButton)
         self.previousButton.tintColor = .label
         self.previousButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        self.previousButton.addTarget(self, action: #selector(self.didPreviousButtonTouched), for: .touchUpInside)
         self.previousButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.previousButton.widthAnchor.constraint(equalToConstant: 44),
@@ -93,6 +94,7 @@ final class ViewController: UIViewController {
         self.contentView.addSubview(self.nextButton)
         self.nextButton.tintColor = .label
         self.nextButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        self.nextButton.addTarget(self, action: #selector(self.didNextButtonTouched), for: .touchUpInside)
         self.nextButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.nextButton.widthAnchor.constraint(equalToConstant: 44),
@@ -230,6 +232,18 @@ extension ViewController {
     private func plusMonth() {
         self.calendarDate = self.calendar.date(byAdding: DateComponents(month: 1), to: self.calendarDate) ?? Date()
         self.updateCalendar()
+    }
+    
+}
+
+extension ViewController {
+    
+    @objc private func didPreviousButtonTouched(_ sender: UIButton) {
+        self.minusMonth()
+    }
+    
+    @objc private func didNextButtonTouched(_ sender: UIButton) {
+        self.plusMonth()
     }
     
 }
